@@ -2,38 +2,77 @@
 
 namespace Inheritance
 {
-    class Program
+    public partial class Program
     {
         static void Main(string[] args)
         {
-            // TODO Be sure to follow best practice when creating your classes
+            var bird = new Bird();
+            string input = "";
+          
+            Console.WriteLine("Enter a chirping sound for your bird: ");
+            input = Console.ReadLine();
+            bird.chirp = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
+            Console.WriteLine("How fast can this bird Fly? ");
+            input = Console.ReadLine();
+            bird.fly = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
+
+            Console.WriteLine("How good is the birds vision: ");
+            input = Console.ReadLine();
+            bird.vision = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
+
+            Console.WriteLine("How many hours of sleep does it get in a day? ");
+            input = Console.ReadLine();
+            bird.sleeps = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
 
 
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
+            Console.WriteLine(bird.chirp);
+            Console.WriteLine(bird.fly);
+            Console.WriteLine(bird.vision);
+            Console.WriteLine(bird.sleeps);
 
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
+            Console.WriteLine();
+            Console.WriteLine();
 
 
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
+            var reptile = new Reptile();
+            input = "";
 
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
+            Console.WriteLine("Does you reptile have scaly skin ?");
+            input = Console.ReadLine();
+            reptile.roughSkin = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
+
+            Console.WriteLine("Color of eyes ?");
+            input = Console.ReadLine();
+            reptile.yellowEyes = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
+
+            Console.WriteLine("Walks on Four ?");
+            input = Console.ReadLine();
+            reptile.walksOnFour = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
+
+            Console.WriteLine("does have a tail ? ");
+            input = Console.ReadLine();
+            reptile.tail = (input == "") ? "You entered an empty string" : input;
+            Console.WriteLine();
+
+
+            Console.WriteLine(reptile.roughSkin);
+            Console.WriteLine(reptile.yellowEyes);
+            Console.WriteLine(reptile.walksOnFour);
+            Console.WriteLine(reptile.tail);
+
+
+
+
+
+           
         }
     }
 }
